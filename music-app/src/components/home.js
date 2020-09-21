@@ -63,8 +63,10 @@ function Home() {
             {songs.map(item=> 
             (
             <div key= {item.id} >
+              <Link to= {`/songs/${item.id}?top_songs=20`}>
               <img src={`https://img.youtube.com/vi/${item.youtube_link.slice(30)}/hqdefault.jpg`} alt='Views' width="100" height="100"/>
-              <div><Link to= {`/songs/${item.id}?top_songs=20`}>{item.title}</Link></div>
+              <div>{item.title}</div>
+              </Link>
             </div>
             ))}
             </Carousel>
@@ -77,8 +79,10 @@ function Home() {
             >
             {artists.map(item=> (
             <div key= {item.id} >
+              <Link to= {`/artists/${item.id}`}>
               <img src={item.cover_img} alt='Views' width="100" height="100"/>
-              <div><Link to= {`/artists/${item.id}`}>{item.name}</Link></div>
+              <div>{item.name}</div>
+              </Link>
             </div>
             ))}
             </Carousel>
@@ -91,8 +95,10 @@ function Home() {
             >
             {albums.map(item=> (
             <div key= {item.id}>
+              <Link to= {`/albums/${item.id}`}>
               <img src={item.cover_img} alt='Views' width="100" height="100"/>
-              <div><Link to= {`/albums/${item.id}`}>{item.name}</Link></div>
+              <div>{item.name}</div>
+              </Link>
             </div>
             ))}
             </Carousel>
@@ -105,8 +111,10 @@ function Home() {
             >
             {playlist.map(item=> (
             <div key= {item.id} >
+              <Link to= {`/playlists/${item.id}`}>
               <img src={item.cover_img} alt='Views' width="100" height="100"/>
-              <div><Link to= {`/playlists/${item.id}`}>{item.name}</Link></div>
+              <div>{item.name}</div>
+              </Link>
             </div>
             ))}
             </Carousel>

@@ -39,8 +39,10 @@ function Songs() {
             <div className='flexDisplayPage'>
             {display.map(item=> (
             <div key= {item.id} >
+                <Link to= {`/songs/${item.id}`} >
                 <img src={`https://img.youtube.com/vi/${item.youtube_link.slice(30)}/hqdefault.jpg`} width="100" height="100"/>
-                <div><Link to= {`/songs/${item.id}`} >{item.title}</Link></div>
+                <div>{item.title}</div>
+                </Link>
             </div>
             ))}
             </div>

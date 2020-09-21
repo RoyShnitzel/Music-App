@@ -39,8 +39,10 @@ function Artists() {
             <div className='flexDisplayPage'>
             {display.map(item=> (
             <div key= {item.id} >
+                <Link to= {`/artists/${item.id}`}>
                 <img src={item.cover_img} alt='My PlatList' width="100" height="100"/>
-                <div><Link to= {`/artists/${item.id}`}>{item.name}</Link></div>
+                <div>{item.name}</div>
+                </Link>
             </div>
             ))}
         </div>
