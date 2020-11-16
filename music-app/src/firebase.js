@@ -3,14 +3,13 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAYU9H2sxQYgURHEfzuM8FGlHOpDuN7fKA",
-  authDomain: "music-app-9deb8.firebaseapp.com",
-  databaseURL: "https://music-app-9deb8.firebaseio.com",
-  projectId: "music-app-9deb8",
-  storageBucket: "music-app-9deb8.appspot.com",
-  messagingSenderId: "497498508584",
-  appId: "1:497498508584:web:70f69e581cb1ac1ad6141d",
-  measurementId: "G-K4FDWKER7G",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
